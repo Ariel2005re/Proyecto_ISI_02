@@ -1,24 +1,3 @@
-"""
-preparar_datos.py - Carga inicial de datos (ejecutar UNA sola vez)
-==================================================================
-Problema de diseño resuelto aquí (explicarlo en el informe):
-El dataset de Kaggle (gym churn) describe PERFILES de clientes (edad,
-contrato, frecuencia, churn) pero NO contiene transacciones con fecha y
-monto, que son indispensables para RFM y para el dashboard temporal.
-
-Solución: usamos Kaggle como BASE DE CLIENTES y, a partir de cada perfil,
-SIMULAMOS su histórico transaccional de los últimos 12 meses de forma
-coherente:
-  - Frecuencia de compra proporcional a Avg_class_frequency_total.
-  - Gasto adicional proporcional a Avg_additional_charges_total.
-  - Si Churn = 1, el cliente dejó de comprar hace 45-180 días
-    (así el CRM y el RFM detectan deserción REAL, no inventada al azar).
-
-Uso:
-    python preparar_datos.py            # busca data/gym_churn.csv; si no
-                                        # existe, genera perfiles sintéticos
-"""
-
 import os
 import random
 from datetime import datetime, timedelta

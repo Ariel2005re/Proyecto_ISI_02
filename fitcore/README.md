@@ -76,5 +76,5 @@ se simula de forma coherente con cada perfil: la frecuencia de compra sigue
 
 ## Autores
 
-- [Integrante 1]
-- [Integrante 2]
+- Ariel Recalde
+- Jordy Cartagena

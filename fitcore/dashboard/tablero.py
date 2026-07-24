@@ -1,17 +1,3 @@
-"""
-dashboard/tablero.py - Dashboard Gerencial (Fase 4)
-===================================================
-Tablero de control 2x2 generado con Matplotlib/Seaborn que cumple los 3
-indicadores exigidos (más uno extra del CRM):
-  1. Evolución temporal de ventas (semanal).
-  2. Distribución de segmentos RFM.
-  3. KPI financiero del ERP (Ingresos vs Gastos) + KPI del SCM
-     (productos más pedidos a proveedores).
-  4. Panel de alertas del CRM (clientes en riesgo de deserción).
-
-Se regenera con cada venta durante la demo: registrar una transacción en el
-Core y volver a abrir el PNG evidencia la actualización automática.
-"""
 
 import os
 from datetime import datetime

@@ -8,13 +8,6 @@ SCM y CRM, que quedan "escuchando" los eventos del Core. Todo lo que se
 haga desde el menú (una venta, por ejemplo) dispara automáticamente las
 reacciones de los demás sistemas: esa es la evidencia de integración.
 
-Cómo correr la demo de la defensa:
-  1. python preparar_datos.py     (una sola vez: carga clientes + histórico)
-  2. python main.py
-  3. Opción 5 (RFM) y opción 4 (CRM) para poblar la analítica
-  4. Opción 7 para generar el dashboard inicial
-  5. Opción 1: registrar una venta en vivo -> ver cómo ERP/SCM/CRM
-     reaccionan en consola, y regenerar el dashboard (opción 7).
 """
 
 from core.modelos import Venta, Cliente
@@ -103,12 +96,12 @@ def main():
     print("Módulos ERP, SCM y CRM suscritos al bus de eventos.\n")
 
     opciones = """
-  1) Registrar VENTA (Core)  ->  dispara ERP/SCM/CRM automáticamente
-  2) Registrar cliente nuevo (Core)
-  3) Ver estado de caja y libro diario (ERP)
-  4) Analizar clientes inactivos (CRM)
+  1) Registrar VENTA   ->  dispara ERP/SCM/CRM automáticamente
+  2) Registrar cliente nuevo 
+  3) Ver estado de caja y libro diario 
+  4) Analizar clientes inactivos 
   5) Calcular segmentación RFM (Analítica)
-  6) Ver órdenes de compra / recibir orden (SCM)
+  6) Ver órdenes de compra / recibir orden 
   7) Generar/actualizar DASHBOARD gerencial
   0) Salir
 """

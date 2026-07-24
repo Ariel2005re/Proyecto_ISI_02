@@ -1,15 +1,3 @@
-"""
-demo_integracion.py - Demostración automática de la integración
-===============================================================
-Ejecuta el guion completo de la defensa sin interacción manual:
-  1. Levanta el ecosistema (módulos suscritos al bus).
-  2. Calcula RFM y corre el análisis CRM sobre el histórico.
-  3. Genera el dashboard "ANTES".
-  4. Registra UNA VENTA EN VIVO con stock al límite
-     -> se observa en consola: Core -> ERP (asiento) + SCM (orden) -> ERP (gasto)
-  5. Regenera el dashboard "DESPUÉS" para evidenciar la actualización.
-"""
-
 from core.modelos import Venta
 from core.sistema_core import SistemaCore
 from modules.erp import ModuloERP

@@ -1,19 +1,3 @@
-"""
-database.py - Capa de Persistencia (SQLite)
-===========================================
-Cumple el requisito 2.1: "persistencia de datos (archivos CSV o Base de Datos)".
-Se eligió SQLite porque:
-  1. Viene incluido en Python (cero instalación).
-  2. Permite consultas SQL reales para RFM y CRM (ventaja frente a CSV).
-  3. Un solo archivo (data/fitcore.db) = fácil de entregar y respaldar.
-
-Modelo de datos (refleja el Diagrama ER del informe):
-  clientes(1) --- (N)ventas(1) --- (N)detalle_venta(N) --- (1)productos
-  productos(N) --- (1)proveedores            (vía ordenes_compra del SCM)
-  ventas(1) --- (1)asientos_contables        (generados por el ERP)
-  clientes(1) --- (N)alertas_crm             (generadas por el CRM)
-"""
-
 import sqlite3
 import os
 
